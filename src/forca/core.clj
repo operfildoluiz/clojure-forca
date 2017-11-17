@@ -1,7 +1,8 @@
 (ns forca.core
   (:gen-class))
 
-(def totaldevidas 6)
+(def total-de-vidas 6)
+(def palavra-secreta "ITUBAINA")
 
 (defn perdeu [] (println "Voce perdeu"))
 (defn ganhou [] (println "Voce ganhou"))
@@ -52,7 +53,7 @@
    )
 )
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
+(defn comeca-jogo [] (jogo total-de-vidas palavra-secreta #{}))
+
+(defn -main  [& args]
+  (comeca-jogo))
